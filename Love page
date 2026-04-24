@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+<style>
+body {
+  background: black;
+  overflow: hidden;
+  margin: 0;
+}
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(-10vh); }
+  100% { transform: translateY(110vh); }
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 id="text"></h1>
+
+<script>
+let name = prompt("Enter your name ❤️");
+
+document.getElementById("text").innerHTML = "I Love You " + name + " ❤️";
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>
