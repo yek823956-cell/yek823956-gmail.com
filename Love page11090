@@ -31,7 +31,7 @@ h1 {
 <h1 id="text"></h1>
 
 <script>
-let name = prompt("Enter your name ❤️");
+let name = prompt("tunlinaung ❤️");
 
 document.getElementById("text").innerHTML = "I Love You " + name + " ❤️";
 
@@ -45,10 +45,10 @@ function createHeart() {
 
   setTimeout(() => {
     heart.remove();
-  }, 5000);
+  }, 100000);
 }
 
-setInterval(createHeart, 200);
+setInterval(createHeart, 4000);
 </script>
 
 </body>
