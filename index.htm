@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Zuzuaung ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(black, #1a001a);
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font-family: Arial;
+}
+
+h1 {
+  margin-top: 15%;
+  font-size: 45px;
+  color: pink;
+  text-shadow: 0 0 20px red;
+}
+
+p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-100vh);}
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: pink;
+  cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>I Love You, Zuzuaung ❤️</h1>
+<p>You are my only one 💖</p>
+<p>Forever together 🥰</p>
+
+<button onclick="alert('Zuzuaung ❤️ You are my everything 💘')">
+Click Me 💌
+</button>
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random()*3+2)+"s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>
